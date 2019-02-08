@@ -1,0 +1,71 @@
+// ======================================
+//  Variables
+// ======================================
+// -------------------------------------------
+// Colors
+// -------------------------------------------
+// basic
+$white: #fff;
+$silver: #C0C0C0;
+$black: #000;
+
+// webpage specific colors
+        $cornflower-blue: #51ddfc;
+                $emerald: #63cc82;
+                 $sunglo: #e4757a;
+                  $coral: #fd7856;
+$purple-mountain-majesty: #927bc1;
+
+$themes: (
+    default: $cornflower-blue,
+    success: $emerald,
+      error: $sunglo,
+    warning: $coral,
+       info: $purple-mountain-majesty,
+          1: lighten($cornflower-blue, 10%),
+          2: darken($emerald, 10%),
+          3: desaturate($sunglo, 10%),
+          4: lighten($coral, 10%),
+          5: darken($purple-mountain-majesty, 10%),
+          6: desaturate($cornflower-blue, 10%),
+          7: lighten($emerald, 10%),
+          8: darken($sunglo, 10%),
+          9: desaturate($coral, 10%),
+         10: lighten($purple-mountain-majesty, 10%),
+         11: darken($cornflower-blue, 10%),
+         12: desaturate($emerald, 10%),
+);
+
+
+$color-primary: map-get($themes, success);
+$color-secondary: map-get($themes, default);
+
+// -------------------------------------------
+// Fonts
+// -------------------------------------------
+$font-stack-sansserif: Helvetica, Verdana, sans-serif;
+$font-stack-serif: Georgia, TimesNewRoman, serif;
+$font-stack-mono: "Courier New", Courier, monospace;
+
+// -------------------------------------------
+// Fonts size
+// -------------------------------------------
+$base__font-size: 16px;
+$base__line: 24px;
+
+// -------------------------------------------
+// Breakpoints
+// -------------------------------------------
+$breakpoints: (
+     "small": 768px,
+    "middle": 1024px,
+       "big": 3440px
+);
+
+// -------------------------------------------
+// Grid
+// -------------------------------------------
+$g-col-width    : 65px;
+$g-gutter-width : 20px;
+$g-col-count    : 12;
+$g-cont-max-w   : 1050px;

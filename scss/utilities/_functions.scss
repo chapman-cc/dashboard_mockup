@@ -1,0 +1,24 @@
+// ======================================
+//  Functions
+// ======================================
+
+// em() is a function to conver px input to em unit in scss,
+// user must input e.g. 1024px into parameter
+@function em($target, $context: $base__font-size) {
+    @return ($target / $context) * 1em    ;
+}
+
+// theme() is a function to select a theme color from the $theme variables
+@function theme($theme) {
+    @return map-get($themes, $theme);
+}
+
+// convert px to em
+@function em($target, $context: $base__font-size) {
+    @return ($target / $context) * 1em;   
+}
+// set the "context" width for the grid;
+@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
+    $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * $g-col-count - 1);
+    @return $g-context;
+}

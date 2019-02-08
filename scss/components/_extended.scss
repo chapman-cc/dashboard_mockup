@@ -1,0 +1,36 @@
+// -------------------------------------------
+// PLACEHOLDERS
+// ------ Links
+
+%link {
+    text-decoration: none;
+    color: $color-secondary;
+}
+// ------ Images
+
+%img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+// ------ Headlines
+
+%hdln-prim {
+    color: $color-primary;
+    letter-spacing: -2px;
+    margin-left: 0.5em;
+};
+
+%hdln-sec {
+    color: $silver;
+    font-weight: normal;
+    margin-left: 0.5em;
+};
+// ------ Nav items
+
+%round-box {
+    padding: em(16px);
+    margin-bottom: 1em;
+    border: 2px $silver solid;
+    border-radius: 10px;
+}

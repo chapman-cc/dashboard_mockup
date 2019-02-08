@@ -1,0 +1,21 @@
+// -------------------------------------------
+// BUTTONS
+// -------------------------------------------
+
+[class^="btn--"] {
+    @extend %round-box;
+    color: $white;
+    text-transform: uppercase;
+    @include mq(small) {
+        width: 100%;
+    }
+    @include mq(middle) {
+        display: inline-block;
+
+        //button in form takes all width
+        form & {
+            display: block;
+            width: 100%
+        }
+    };
+};

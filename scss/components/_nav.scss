@@ -1,0 +1,26 @@
+// -------------------------------------------
+// Navigation bar Styling
+// -------------------------------------------
+
+.nav {
+    @include mq(middle) {
+        @include flexy;
+    };
+    &__item a {
+        @extend %round-box;
+        display: block;
+        color: $black;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            color: $white;
+            background-color: $color-primary;
+        }
+        @include mq(middle) {
+            display: inline-block;
+            font-weight: normal;
+        }
+    }
+}

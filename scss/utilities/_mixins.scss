@@ -1,0 +1,40 @@
+// -------------------------------------------
+// Mixins
+// -------------------------------------------
+@mixin center-container($percent: 90%, $max: null) {
+    width: $percent;
+    max-width: $max;
+    margin: 0 auto;
+    @content;
+};
+
+// ----- Flexbox
+@mixin flexy ($direction: row, $wrap: wrap, $justify: center, $align: center) {
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    @content
+};
+
+ // ----- Media Queries
+@mixin mq($break) {
+    @if $break == 'small' {
+        @media only screen and (max-width: map-get($breakpoints, small)) {
+            @content;
+        }
+    } @else
+    if $break == 'middle' {
+        @media only screen and (min-width: map-get($breakpoints, small)) {
+            @content;
+        }
+    } @else
+    if $break == 'big' {
+        @media only screen and (min-width: map-get($breakpoints, middle)) {
+            @content;
+        }
+    } @else {
+        @error "Invalid breakpoints: "#{$break};
+    }
+}
