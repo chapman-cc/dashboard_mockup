@@ -17,6 +17,7 @@
     }
     &__icon {
         display: block;
+        pointer-events: none;
         height: em(40px);
         margin: 16px auto;
         @include mq(big) {
