@@ -33,8 +33,42 @@
                 <img class="navbar__icon" src="icons/icon-settings.svg" alt="User Settings">
             </a>
         </nav>
-        <main>
-            main
+        <main class="dashboard" id="dashboard">
+            <section id="traffic" class="dashboard__traffic widget">
+
+            </section>
+            <section id="daily-traffic" class="dashboard__dailytraffic widget">
+
+            </section>
+            <section id="mobile-users" class="widget">
+
+            </section>
+            <section id="social" class="widget">
+
+            </section>
+            <section id="members" class="widget">
+
+            </section>
+            <section id="recent-act" class="widget">
+
+            </section>
+            <section id="message" class="widget">
+
+            </section>
+            <section id="settings" class="widget">
+                <h3>Settings</h3>
+
+                <label for="setEmailNotification">Send Email Notification</label>
+                <input type="checkbox" name="settings" id="setEmailNotification">
+                <br>
+                <label for="setPublicProfile">Set Profile Public</label>
+                <input type="checkbox" name="settings" id="setPublicProfile">
+                <br>
+                <select id="setTimezone" name="timezone">
+                    <option value="" disabled selected>Select Timezone</option>
+                </select>
+
+            </section>
         </main>
 </body>
 
