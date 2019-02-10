@@ -2,10 +2,9 @@
 // TEXT Styling
 // -------------------------------------------
 .headline {
-    display: inline-block;
     color: white;
     font-size: em(24px);
-    
+
     & span {
         font-weight: bold;
     }
