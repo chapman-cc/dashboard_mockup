@@ -4,10 +4,17 @@
 
 .navbar {
     background-color: $color-secondary;
-    padding: em(16px);
     @include flexy(row, nowrap, space-between);
-
+    & a {
+        width: 25%;
+        border-right: 1px solid $black;
+        &:last-child {
+            border-right: 0;
+        }
+    }
     &__icon {
-        width: em(40px);
+        display: block;
+        height: em(40px);
+        margin: 16px auto;
     }
 }
