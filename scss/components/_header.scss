@@ -1,0 +1,21 @@
+// ========================================
+// HEADER
+// ========================================
+
+.header {
+    .headline,
+    div {
+        display: inline-block;
+    }
+
+    &__icon {
+        height: 40px;
+        padding-right: 16px;
+        border-right: 1px $black solid;
+
+        &--avatar {
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+}
