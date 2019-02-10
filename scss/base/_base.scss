@@ -4,13 +4,10 @@
 
 * {
     box-sizing: border-box;
+}
+
+body {
     font-family: $font-stack-sansserif;
     font-size: $base__font-size;
-    line-height: ($base__line / $base__font-size)
-}
-
-ul {
-}
-
-p {
+    line-height: ($base__line / $base__font-size);
 }
