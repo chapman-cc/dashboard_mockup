@@ -1,32 +1,12 @@
 // -------------------------------------------
 // TEXT Styling
 // -------------------------------------------
-
-.headline-- {
-    &primary {
-        @extend %hdln-prim;
+.headline {
+    display: inline-block;
+    color: white;
+    font-size: em(24px);
+    
+    & span {
+        font-weight: bold;
     }
-
-    &secondary {
-        @extend %hdln-sec;
-    }
-}
-// hyperlink in text styling
-
-.link {
-    @extend %link;
-}
-// a block of quotes
-
-.blockquote {
-    font-style: oblique;
-    font-size: 1.2em;
-    color: $silver;
-    padding-left: em(10px);
-    border-left: em(8px) solid $color-primary;
-    border-radius: 10px;
-    @include mq(middle) {
-        font-size: 1.4em;
-        padding-left: em(30px);
-    };
 }

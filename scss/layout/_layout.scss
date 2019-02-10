@@ -3,13 +3,25 @@
 // ========================================
 
 .container {
-    @include center-container($max: 1024px);
+    @include center-container(80%);
     min-width: 300px;
+
+    .header & {
+        @include flexy($justify: space-between);
+    }
 }
 
 .header {
     background-color: $color-primary;
-}
-.icons {
-    width: 100px;
+
+    &__notif {
+        width: 30px;
+        padding-right: 10px;
+        border-right: 1px $black solid;
+    }
+
+    &__avatar {
+        border-radius: 50%;
+        @extend .header__notif;
+    }
 }
