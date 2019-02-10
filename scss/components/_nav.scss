@@ -9,10 +9,18 @@
         &:last-child {
             border-right: 0;
         }
+
+        @include mq(big) {
+            width: 100%;
+            border: 1px solid $black;
+        };
     }
     &__icon {
         display: block;
         height: em(40px);
         margin: 16px auto;
+        @include mq(big) {
+            margin: 24px
+        };
     }
 }
