@@ -1,3 +1,36 @@
 // ========================================
-// GRID 
+// GRID
 // ========================================
+
+.header {
+    grid-area: header;
+}
+.navbar {
+    grid-area: navbar;
+}
+
+main {
+    grid-area: main;
+}
+
+.grid {
+    display: grid;
+    /* -- mobile grid layout -- */
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 100px auto ;
+    grid-template-areas:
+        "header"
+        "navbar"
+        "main";
+    /* -- desktop grid layout -- */
+    @include mq(big) {
+        grid-template-columns: 12.5% 1fr 1fr;
+        grid-template-rows: 200px 200px repeat(5, 1fr);
+        grid-template-areas:
+            "header header header"
+            "navbar main main"
+            "navbar main main"
+            "navbar main main"
+            "navbar main main";
+    };
+}
