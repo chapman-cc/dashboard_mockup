@@ -3,8 +3,6 @@
 // -------------------------------------------
 
 .navbar {
-    background-color: $color-secondary;
-    @include flexy(row, nowrap, space-between);
     & a {
         width: 25%;
         border-right: 1px solid $black;
