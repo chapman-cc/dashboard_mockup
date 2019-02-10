@@ -1,6 +1,18 @@
 // ========================================
 // GRID
 // ========================================
+.grid {
+    display: grid;
+    /* -- mobile grid layout -- */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    // grid-auto-rows: 300px;
+    /* -- desktop grid layout -- */
+    @include mq(big) {
+        grid-template-columns: auto 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+    };
+}
 
 .header {
     grid-row: 1/2;
@@ -12,28 +24,31 @@
 .navbar {
     grid-row: 2/3;
     @include mq(big) {
-        grid-row: 2 / span 10;
+        grid-row: 2 / span 1;
         grid-column: 1 / 2;
     };
 }
 
-main {
-    grid-row: 3 / span 10;
+.dashboard {
+    grid-row: 3 / 4;
     @include mq(big) {
-        grid-row: 2 / span 10;
-        grid-column: 2 / 3;
-    };
+        grid-row: 2 / 3;
+        grid-column: 2 / 4;
+    }
+    // ==========================
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    /* -- mobile grid layout -- */
+    @include mq(big){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
 }
 
-.grid {
-    display: grid;
-    /* -- mobile grid layout -- */
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    grid-auto-rows: 100px;
-    /* -- desktop grid layout -- */
-    @include mq(big) {
-        grid-template-columns: auto 1fr 1fr;
-        grid-template-rows: auto auto repeat(5, 1fr);
+#settings {
+    grid-row: 8 /9;
+    @include mq(big){
+        grid-row: 4/5;
+        grid-column: 2/3;
     };
 }
