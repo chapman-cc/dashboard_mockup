@@ -10,19 +10,20 @@
 
     &__icon {
         height: 40px;
-        border-right: 1px $black solid;
-
-        &--avatar {
-            border-radius: 50%;
-            height: 40px;
-            @include mq(middle) {
-                height: em(30px);
-            };
-        }
+        // transition: all 1s;
+        // border-right: 1px $black solid;
         @include mq(middle) {
             height: em(30px);
             padding-right: em(30px);
             margin-right: em(30px);
         };
+    }
+
+    &__avatar {
+        border-radius: 50%;
+        height: 40px;
+        @include mq(middle) {
+            height: em(30px);
+        }
     }
 }
