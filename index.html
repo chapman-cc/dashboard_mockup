@@ -58,20 +58,22 @@ new message
             <section id="settings" class="settings dash__widget">
                 <h3>Settings</h3>
 
-                <label for="setEmailNotification">Send Email Notification</label>
-                <input type="checkbox" name="settings" id="setEmailNotification">
-                <br>
-                <label for="setPublicProfile">Set Profile Public</label>
-                <input type="checkbox" name="settings" id="setPublicProfile">
-                <br>
-                <select id="setTimezone" name="timezone">
-                    <option value="" disabled selected>Select Timezone</option>
-                </select>
-
+                <form class="" action="index.html" method="post">
+                    <label for="setEmailNotification">Send Email Notification</label>
+                    <input type="checkbox" name="settings" id="setEmailNotification">
+                    <br>
+                    <label for="setPublicProfile">Set Profile Public</label>
+                    <input type="checkbox" name="settings" id="setPublicProfile">
+                    <br>
+                    <select id="setTimezone" name="timezone">
+                        <option value="" disabled selected>Select Timezone</option>
+                    </select>
+                </form>
             </section>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+            <script src="js/app.js"></script>
         </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/app.js"></script>
 </body>
 
 </html>
