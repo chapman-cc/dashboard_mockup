@@ -1,0 +1,39 @@
+.dash {
+    &__widget {
+        border: 1px $silver solid;
+    }
+    &__name{
+        color: $silver;
+    }
+}
+
+.social {
+    &__container {
+        @include flexy(row, wrap, space-around);
+        padding: 1em;
+    }
+    &__box {
+        width: 25%;
+        padding: 1em;
+        border: 1px $silver solid;
+        background-color: $silver;
+        @include flexy(row, nowrap);
+    }
+    &__stat{
+        display: inline-block;
+    }
+    &__logo {
+        height: em(100px);
+        // padding: em(10px);
+        fill: $white;
+        background-color: $color-primary;
+        border-radius: 50%;
+    }
+    &__media {
+        font-weight: bold;
+        color: $color-primary;
+    }
+    &__num {
+        font-size: 2em;
+    }
+}
