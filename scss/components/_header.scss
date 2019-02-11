@@ -1,28 +1,3 @@
 // ========================================
 // HEADER
 // ========================================
-
-.header {
-    .headline,
-    div {
-        display: inline-block;
-    }
-
-    &__icon {
-        height: 40px;
-        border-right: 1px $black solid;
-
-        &--avatar {
-            border-radius: 50%;
-            height: 40px;
-            @include mq(middle) {
-                height: em(30px);
-            };
-        }
-        @include mq(middle) {
-            height: em(30px);
-            padding-right: em(30px);
-            margin-right: em(30px);
-        };
-    }
-}

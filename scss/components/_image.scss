@@ -1,22 +1,3 @@
 // -------------------------------------------
 // IMAGE Styling
 // -------------------------------------------
-
-.img {
-    &--logo {
-        @extend %img;
-    }
-
-    &--avatar {
-        @extend %img;
-    }
-
-    &--frame {
-        @extend %img;
-        width: 100%;
-        height: auto;
-        padding: em(10px);
-        border: 1px solid $silver;
-        box-shadow: 0 0 0.5px $silver;
-    }
-}
