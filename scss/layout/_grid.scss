@@ -10,18 +10,18 @@
     grid-template-areas:
         "header"
         "navbar"
-        "dashboard";
+        "dash";
     /* -- desktop grid layout -- */
-    @include mq(big) {
+    @include mq(middle) {
         grid-template-columns: auto 1fr 1fr;
         grid-template-rows: repeat(2, auto);
         grid-template-areas:
             "header header header"
-            "navbar dashboard dashboard"
+            "navbar dash dash"
     };
 }
 
-.dashboard {
+.dash {
     display: grid;
     grid-template-rows: 50px repeat(8, 1fr);
     grid-template-areas:
@@ -50,7 +50,7 @@
 
 .header {grid-area: header;}
 .navbar {grid-area: navbar;}
-.dashboard {grid-area: dashboard;}
+.dash {grid-area: dash;}
 
 .traffic {grid-area: traffic;}
 .daily-traffic {grid-area: daily-traffic;}
