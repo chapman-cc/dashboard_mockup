@@ -15,11 +15,11 @@
         &--avatar {
             border-radius: 50%;
             height: 40px;
-            @include mq(big) {
+            @include mq(middle) {
                 height: 50px;
             };
         }
-        @include mq(big) {
+        @include mq(middle) {
             height: 50px;
             padding-right: em(30px);
             margin-right: em(30px);

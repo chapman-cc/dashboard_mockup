@@ -13,7 +13,7 @@
 .navbar {
     background-color: $color-secondary;
     @include flexy(row, nowrap, space-between);
-    @include mq(big) {
+    @include mq(middle) {
         @include flexy(column, nowrap, flex-start);
     };
 }

@@ -10,7 +10,7 @@
             border-right: 0;
         }
 
-        @include mq(big) {
+        @include mq(middle) {
             width: 100%;
             border: 1px solid $black;
         };
@@ -20,7 +20,7 @@
         pointer-events: none;
         height: em(40px);
         margin: 16px auto;
-        @include mq(big) {
+        @include mq(middle) {
             margin: 24px
         };
     }
