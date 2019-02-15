@@ -33,8 +33,10 @@
     }
 
     //styling for paragraph inside .log__message
-    &__message {
-
+    &__message,
+    &__link,
+    &__date {
+        font-size: 0.8em;
     }
     &__link {
         color: $color-primary;
