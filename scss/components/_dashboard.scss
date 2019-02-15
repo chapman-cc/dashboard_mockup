@@ -6,69 +6,38 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
+    grid-template-areas:
+        "toolbar toolbar"
+        "alert alert"
+        "traffic traffic"
+        "daily-traffic mobile-user"
+        "social social"
+        "new-members recent-activity"
+        "message-user settings";
 
-    &__toolbar {
-        grid-column: 1/3;
-        grid-row: 1/2;
-        // @include flexy(row, nowrap, space-between);
-    }
-    .traffic {
-        grid-column: 1/3;
-        grid-row: 2/3;
-    }
-
-    .social {
-        grid-column: 1/3;
-        grid-row: 4/5;
-    }
-
-    .daily-traffic {
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
-
-    .new-members {
-        grid-column: 1/2;
-        grid-row: 5/6;
-    }
-
-    .message-user {
-        grid-column: 1/2;
-        grid-row: 6/7;
-    }
-
-    .mobile-user {
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-
-    .recent-activity {
-        grid-column: 2/3;
-        grid-row: 5/6;
-    }
-
-    .settings {
-        grid-column: 2/3;
-        grid-row: 6/7;
-    }
+    &__toolbar {grid-area: toolbar;}
+    .alert {grid-area: alert;}
+    .traffic {grid-area: traffic;}
+    .daily-traffic {grid-area: daily-traffic;}
+    .social {grid-area: social;}
+    .new-members {grid-area: new-members;}
+    .message-user {grid-area: message-user;}
+    .mobile-user {grid-area: mobile-user;}
+    .recent-activity {grid-area: recent-activity;}
+    .settings {grid-area: settings;}
 
     &__widget {
         padding: 1em;
     }
     // ---------------------------------
     &__toolbar {
-        display: grid;
-        grid-template-columns: auto 30%;
-        grid-template-rows: repeat(2, 1fr);
+        @include flexy(row, nowrap, space-between);
     }
+
     &__search {
-        grid-column: 2/3;
     }
+
     &__tag {
-        grid-column: 1/2;
     }
-    .alert {
-        grid-column: 1/3;
-        grid-row: 2/3
-    }
+
 }
