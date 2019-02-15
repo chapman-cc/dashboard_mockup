@@ -1,3 +1,53 @@
 // -------------------------------------------
 // Navigation bar Styling
 // -------------------------------------------
+
+.nav {
+    padding: 0.5em;
+    @include flexy(row, nowrap, space-around, center);
+
+    @include mq(middle) {
+        @include flexy(column, nowrap, flex-start, center);
+    };
+
+    // set .nav__link to change border color
+    &__link {
+        border-radius: 2px;
+        border: 3px rgba($de-york, 0) solid;
+        transition: border 200ms ease-out;
+        @include mq(middle){
+            padding-left: 0.5em;
+            transition: border 200ms ease-out;
+
+        };
+    }
+
+    &__link:hover {
+        @include mq(small){
+            border-bottom-color: rgba($de-york, 1);
+
+        };
+        @include mq(middle){
+            border-left-color: rgba($de-york, 1);
+            // border-bottom-color: 0;
+        };
+    }
+    // -------------------------------------------
+
+    &__icon {
+        pointer-events: none;
+        // padding: 1.5em;
+        // height: 5em;
+    }
+    // set .nav__path to change color
+    &__path {
+        fill: $color-primary;
+        // transform: scale(2);
+        transform-origin: center;
+        transition: fill 200ms ease-out;
+    }
+    &__link:hover &__path {
+        fill: $white;
+    }
+    // -------------------------------------------
+}
