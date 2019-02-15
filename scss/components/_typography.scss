@@ -5,9 +5,7 @@
 .title {
     font-size: 2em;
     font-weight: bold;
-}
 
-.header {
     &--dashboard {
         font-size: 1.3em;
     }
@@ -16,5 +14,4 @@
         color: lighten($color-primary, 10%);
         text-transform: uppercase;
     }
-
 }
