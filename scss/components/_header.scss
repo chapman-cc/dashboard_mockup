@@ -1,0 +1,39 @@
+.header {
+    @include flexy(row, nowrap, space-between);
+
+    &__container {
+        display: inline-block;
+        // margin: 0 1em;
+        @include flexy(row, nowrap, space-between, center);
+        @include mq(middle){
+            margin: 0 2em;
+        };
+    }
+
+    &__seperator {
+        display: inline-block;
+        background-color: $color-secondary;
+        width: 2px;
+        height: 30px;
+        margin: 0 0.5em;
+        @include mq(middle) {
+            margin: 0 1em;
+        };
+    }
+
+    .img--avatar {
+        width: 2.5em;
+        @include mq(middle) {
+            width: 2em;
+        };
+    }
+
+    &__user {
+        display: none;
+        @include mq(middle) {
+            margin-left: 1em;
+            color: $white;
+            text-transform: capitalize;
+        };
+    }
+}
