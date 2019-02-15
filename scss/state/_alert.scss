@@ -9,6 +9,10 @@
     margin: 0.5em 1em;
     background-color: $color-primary;
 
+    &--hidden {
+        display: none;
+    }
+
     @include flexy(row, nowrap, space-between);
 
     &__text {
