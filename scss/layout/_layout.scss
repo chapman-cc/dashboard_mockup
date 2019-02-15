@@ -3,6 +3,7 @@
 // ========================================
 
 .container {
+    min-width: 360px;
     display: grid;
     grid-auto-rows: repeat(3, auto);
     @include mq(middle) {
