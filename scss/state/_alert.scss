@@ -1,0 +1,32 @@
+// ========================================
+// STATES
+// ========================================
+
+.alert {
+    @extend %round-box;
+    padding: 0.8em;
+    margin: 0.5em 1em;
+    background-color: $color-primary;
+
+    @include flexy(row, nowrap, space-between);
+
+    &__text {
+        color: $white;
+        font-weight: lighter;
+
+        &::before {
+            content: "Alert";
+            font-weight: bold;
+            margin-right: 1em;
+        }
+    }
+
+    &__toggle {
+        color:$white;
+        cursor: pointer;
+
+        &:hover {
+            color: darken($color-primary, 20%);
+        }
+    }
+}
