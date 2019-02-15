@@ -10,9 +10,8 @@
     &__toolbar {
         grid-column: 1/3;
         grid-row: 1/2;
-        @include flexy(row, nowrap, space-between);
+        // @include flexy(row, nowrap, space-between);
     }
-    // &__toolbar,
     .traffic {
         grid-column: 1/3;
         grid-row: 2/3;
@@ -55,5 +54,21 @@
 
     &__widget {
         padding: 1em;
+    }
+    // ---------------------------------
+    &__toolbar {
+        display: grid;
+        grid-template-columns: auto 30%;
+        grid-template-rows: repeat(2, 1fr);
+    }
+    &__search {
+        grid-column: 2/3;
+    }
+    &__tag {
+        grid-column: 1/2;
+    }
+    .alert {
+        grid-column: 1/3;
+        grid-row: 2/3
     }
 }
