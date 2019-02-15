@@ -1,7 +1,3 @@
-.img--avatar {
-    border-radius: 50%;
-}
-
 .log {
     // background-color: $silver;
     padding: 1em;
@@ -38,7 +34,7 @@
 
     //styling for paragraph inside .log__message
     &__message {
-        
+
     }
     &__link {
         color: $color-primary;
