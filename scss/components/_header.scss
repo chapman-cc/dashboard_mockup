@@ -4,12 +4,11 @@
     &__container {
         display: inline-block;
         // margin: 0 1em;
-        @include flexy(row, nowrap, space-between, center);
+        @include flexy(row, nowrap, space-between, baseline);
         @include mq(middle){
             margin: 0 2em;
         };
     }
-
     &__seperator {
         display: inline-block;
         background-color: $color-secondary;
@@ -20,7 +19,7 @@
             margin: 0 1em;
         };
     }
-
+&__notification,
     .img--avatar {
         width: 2.5em;
         @include mq(middle) {
