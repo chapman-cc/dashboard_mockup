@@ -7,7 +7,7 @@
     display: grid;
     grid-template-rows: 4em ;
     @include mq(middle) {
-        grid-template-columns: 1fr 10% minmax(auto, 1000px) 1fr;
+        grid-template-columns: 1fr 4% minmax(auto, 1000px) 1fr;
         grid-auto-rows: auto;
     };
 }
