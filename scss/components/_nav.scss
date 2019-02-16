@@ -4,12 +4,14 @@
 
 .nav {
     padding: 0.5em;
-    @include flexy(row, nowrap, space-around, center);
-
-    @include mq(middle) {
-        @include flexy(column, nowrap, flex-start, center);
+    display: grid;
+    @include mq(small) {
+        grid-template-columns: repeat(4, 1fr);
     };
-
+    @include mq(middle) {
+        grid-template-rows: repeat(4, 1fr);
+        width: 100px;
+    };
     // set .nav__link to change border color
     &__link {
         border-radius: 2px;
