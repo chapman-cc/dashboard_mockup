@@ -10,7 +10,6 @@
     };
     @include mq(middle) {
         grid-template-rows: repeat(4, 1fr);
-        width: 100px;
     };
     // set .nav__link to change border color
     &__link {
