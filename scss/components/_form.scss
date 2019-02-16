@@ -1,8 +1,12 @@
-// ----- Base input and textarea ----------
-// ----------
-
+// -------------------------------------------
+// FORMS
+// -------------------------------------------
 .form {
     &__label {
+        display: inline-block;
+        width: 40%;
+        margin-bottom: 1em;
+
         &--hidden {
             display: none;
         }
@@ -10,18 +14,16 @@
 
     &__input {
         @extend %round-box;
-        display: block;
         width: 100%;
-        margin: 2em auto;
-        padding-left: 1em;
-        padding-right: 1em;
-        @include mq(middle) {
-            width: 50%;
-        };
 
         &::placeholder {
-            font-size: $base__font-size;
-            font-style: oblique;
+            text-transform: capitalize;
+            font-family: $font-stack-sansserif;
         }
+    }
+    &__col {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1em;
     }
 }

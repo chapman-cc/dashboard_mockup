@@ -10,4 +10,9 @@ body {
     font-family: $font-stack-sansserif;
     font-size: $base__font-size;
     line-height: ($base__line / $base__font-size);
+    color: $base__font-color;
+}
+
+a {
+    text-decoration: none;
 }

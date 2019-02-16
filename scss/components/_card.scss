@@ -1,0 +1,51 @@
+// -------------------------------------------
+// CARDS
+// -------------------------------------------
+.dashboard__widget--social {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    justify-items: center;
+    align-items: stretch;
+}
+
+.card {
+
+    background-color: lighten($silver, 20%);
+    padding: 1em;
+    box-shadow: -1px 0.5px 0.5px $color-primary;
+    @include flexy(row, nowrap);
+
+    &__graphic,
+    &__container {
+        display: inline-block;
+    }
+
+    &__graphic {
+        width: 100px;
+        background-color: $color-primary;
+        padding: 1em;
+        border-radius: 50%;
+    }
+
+
+    .icon__path {
+        fill: white;
+    }
+
+    &__container {
+        margin-left: 1em;
+    }
+
+    &__title {
+        font-size: 1em;
+        color: $color-primary;
+        text-transform: capitalize;
+        font-weight: bold;
+    }
+
+    &__info {
+        font-size: 3em;
+        font-weight: lighter;
+    }
+}

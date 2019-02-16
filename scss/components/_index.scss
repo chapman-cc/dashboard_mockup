@@ -1,12 +1,12 @@
 /* -------------------------------------------
 // COMPONENTS IMPORTS
 ------------------------------------------- */
-@import "extended",
-        "typography",
-        "header",
-        "nav",
-        "widget";
-        // "form"
-        // "image",
-        // "button",
-;
+@import "typography";
+@import "image";
+@import "header";
+@import "nav";
+@import "dashboard";
+@import "card";
+@import "log";
+@import "form";
+@import "button";

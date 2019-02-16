@@ -1,6 +1,3 @@
-const navbar = document.querySelector('#navbar');
-
-navbar.addEventListener('click', e => {
-    e.preventDefault();
+document.querySelector('.nav').addEventListener('click', e => {
     console.log(e.target);
 })

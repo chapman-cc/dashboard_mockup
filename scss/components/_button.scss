@@ -1,21 +1,18 @@
 // -------------------------------------------
 // BUTTONS
 // -------------------------------------------
-
-[class^="btn--"] {
+.btn {
     @extend %round-box;
+    padding: 1em;
     color: $white;
+    width: 100%;
+    border-radius: 5px;
     text-transform: uppercase;
-    @include mq(small) {
-        width: 100%;
-    }
-    @include mq(middle) {
-        display: inline-block;
 
-        //button in form takes all width
-        form & {
-            display: block;
-            width: 100%
-        }
-    };
-};
+    &--affirm {
+        background-color: $color-primary;
+    }
+    &--cancel {
+        background-color: $dove-gray;
+    }
+}

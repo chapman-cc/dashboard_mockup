@@ -2,18 +2,41 @@
 // LAYOUT
 // ========================================
 
+.container {
+    min-width: 360px;
+    display: grid;
+    grid-template-rows: 4em ;
+    @include mq(middle) {
+        grid-template-columns: 1fr 10% minmax(auto, 1000px) 1fr;
+        grid-auto-rows: auto;
+    };
+}
+
 .header {
     background-color: $color-primary;
-    padding-top: 10px;
-    .wrapper {
-        @include center-container(80%);
-        @include flexy($justify: space-between);
-    }
-}
-.navbar {
-    background-color: $color-secondary;
-    @include flexy(row, nowrap, space-between);
+    width: 100%;
+    padding: 1em;
+    grid-row: 1/2;
     @include mq(middle) {
-        @include flexy(column, nowrap, flex-start);
+        grid-column: 2/4;
     };
+}
+
+.nav {
+    grid-row: 2/3;
+    background-color: $color-secondary;
+    @include mq(middle) {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    };
+}
+
+.dashboard {
+    grid-row: 3/4;
+    @include mq(middle) {
+        grid-row: 2/3;
+        grid-column: 3/4;
+    };
+    // grid-row: 2/3;
+    // background-color: grey;
 }

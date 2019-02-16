@@ -1,21 +1,38 @@
-// ========================================
-// HEADER
-// ========================================
-
 .header {
-    .headline,
-    div {
+    @include flexy(row, nowrap, space-between);
+
+    &__container {
         display: inline-block;
+        // margin: 0 1em;
+        @include flexy(row, nowrap, space-between, baseline);
+        @include mq(middle){
+            margin: 0 2em;
+        };
+    }
+    &__seperator {
+        display: inline-block;
+        background-color: $color-secondary;
+        width: 2px;
+        height: 30px;
+        margin: 0 0.5em;
+        @include mq(middle) {
+            margin: 0 1em;
+        };
+    }
+&__notification,
+    .img--avatar {
+        width: 2.5em;
+        @include mq(middle) {
+            width: 2em;
+        };
     }
 
-    &__icon {
-        height: 40px;
-        // transition: all 1s;
-        // border-right: 1px $black solid;
+    &__user {
+        display: none;
         @include mq(middle) {
-            height: em(30px);
-            padding-right: em(30px);
-            margin-right: em(30px);
+            margin-left: 1em;
+            color: $white;
+            text-transform: capitalize;
         };
     }
 
