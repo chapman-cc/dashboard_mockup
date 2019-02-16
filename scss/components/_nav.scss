@@ -35,20 +35,19 @@
         };
     }
     // -------------------------------------------
-
-    &__icon {
+    & .icon {
         pointer-events: none;
-        // padding: 1.5em;
-        // height: 5em;
-    }
+        // transform: scale(0.5);
+
     // set .nav__path to change color
-    &__path {
-        fill: $color-primary;
-        // transform: scale(2);
-        transform-origin: center;
-        transition: fill 200ms ease-out;
+        &__path {
+            fill: $color-primary;
+            transform-origin: center;
+            transition: fill 200ms ease-out;
+        }
     }
-    &__link:hover &__path {
+
+    &__link:hover .icon__path {
         fill: $white;
     }
     // -------------------------------------------
