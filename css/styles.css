@@ -1,0 +1,281 @@
+/* -------------------------------------------
+// BASE IMPORTS
+------------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of meyer reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Verdana, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* -------------------------------------------
+// LAYOUT IMPORTS
+------------------------------------------- */
+.grid {
+  display: grid;
+  /* -- mobile grid layout -- */
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "navbar" "dash";
+  /* -- desktop grid layout -- */
+}
+@media only screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "header header header" "navbar dash dash";
+  }
+}
+
+.dash {
+  display: grid;
+  grid-template-rows: 50px repeat(8, 1fr);
+  grid-template-areas: "." "traffic" "daily-traffic" "mobile-user" "social" "members" "recent" "message" "settings";
+  /* -- mobile grid layout -- */
+}
+@media only screen and (min-width: 1024px) {
+  .dash {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: ". ." "traffic traffic" "daily-traffic mobile-user" "social social" "members recent" "message settings";
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.dash {
+  grid-area: dash;
+}
+
+.traffic {
+  grid-area: traffic;
+}
+
+.daily-traffic {
+  grid-area: daily-traffic;
+}
+
+.mobile-user {
+  grid-area: mobile-user;
+}
+
+.social {
+  grid-area: social;
+}
+
+.members {
+  grid-area: members;
+}
+
+.recent {
+  grid-area: recent;
+}
+
+.message {
+  grid-area: message;
+}
+
+.settings {
+  grid-area: settings;
+}
+
+.header {
+  background-color: #7477BF;
+  padding-top: 10px;
+}
+.header .wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #4d4c72;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+/* -------------------------------------------
+// COMPONENTS IMPORTS
+------------------------------------------- */
+.headline {
+  color: white;
+  font-size: 1.5em;
+}
+.headline span {
+  font-weight: bold;
+}
+
+.header .headline,
+.header div {
+  display: inline-block;
+}
+.header__icon {
+  height: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .header__icon {
+    height: 1.875em;
+    padding-right: 1.875em;
+    margin-right: 1.875em;
+  }
+}
+.header__avatar {
+  border-radius: 50%;
+  height: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .header__avatar {
+    height: 1.875em;
+  }
+}
+
+.navbar a {
+  width: 25%;
+  border-right: 1px solid #000;
+}
+.navbar a:last-child {
+  border-right: 0;
+}
+@media only screen and (min-width: 768px) {
+  .navbar a {
+    width: 100%;
+    border: 1px solid #000;
+  }
+}
+.navbar__icon {
+  display: block;
+  pointer-events: none;
+  height: 2.5em;
+  margin: 16px auto;
+}
+@media only screen and (min-width: 768px) {
+  .navbar__icon {
+    margin: 24px;
+  }
+}
+
+.dash__widget {
+  border: 1px #C0C0C0 solid;
+}
+.dash__name {
+  color: #C0C0C0;
+}
+
+.social__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em;
+}
+.social__box {
+  width: 25%;
+  padding: 1em;
+  border: 1px #C0C0C0 solid;
+  background-color: #C0C0C0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.social__stat {
+  display: inline-block;
+}
+.social__logo {
+  height: 6.25em;
+  fill: #fff;
+  background-color: #7477BF;
+  border-radius: 50%;
+}
+.social__media {
+  font-weight: bold;
+  color: #7477BF;
+}
+.social__num {
+  font-size: 2em;
+}
+
+/*# sourceMappingURL=styles.css.map */
