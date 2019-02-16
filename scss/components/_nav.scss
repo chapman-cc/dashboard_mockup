@@ -17,19 +17,17 @@
         border-radius: 2px;
         border: 3px rgba($de-york, 0) solid;
         transition: border 200ms ease-out;
-        @include mq(middle){
+        @include mq(middle) {
             padding-left: 0.5em;
             transition: border 200ms ease-out;
-
         };
     }
 
     &__link:hover {
-        @include mq(small){
+        @include mq(small) {
             border-bottom-color: rgba($de-york, 1);
-
         };
-        @include mq(middle){
+        @include mq(middle) {
             border-left-color: rgba($de-york, 1);
             // border-bottom-color: 0;
         };
