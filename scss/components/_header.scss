@@ -1,8 +1,8 @@
 .header {
     @include flexy(row, nowrap, space-between);
 
-    &__container {
         display: inline-block;
+    &__profile {
         // margin: 0 1em;
         @include flexy(row, nowrap, space-between, baseline);
         @include mq(middle){
