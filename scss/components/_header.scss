@@ -1,46 +1,54 @@
 .header {
     @include flexy(row, nowrap, space-between);
 
-        display: inline-block;
     &__profile {
-        // margin: 0 1em;
-        @include flexy(row, nowrap, space-between, baseline);
-        @include mq(middle){
+        display: inline-block;
+        @include flexy(row, nowrap, space-between, center);
+        @include mq(middle) {
             margin: 0 2em;
         };
     }
-    &__seperator {
+
+    &__notification,
+    & .img--avatar { //this property the width of profile icons
+        width: em(30px);
+        @include mq(middle) {
+            width: em(40px);
+        };
+    }
+    &__notification {
+        display: inline-block;
+        fill: $white;
+    }
+
+    &__seperator { //draw a line between bell icon and user image
         display: inline-block;
         background-color: $color-secondary;
-        width: 2px;
-        height: 30px;
+        height: 40px;
+        width: 1.5px;
         margin: 0 0.5em;
         @include mq(middle) {
+            width: 2px;
             margin: 0 1em;
         };
     }
-&__notification,
-    .img--avatar {
-        width: 2.5em;
-        @include mq(middle) {
-            width: 2em;
-        };
-    }
 
-    &__user {
+    &__username {
         display: none;
+        color: $white;
+        text-transform: capitalize;
+        margin-left: 1em;
         @include mq(middle) {
-            margin-left: 1em;
-            color: $white;
-            text-transform: capitalize;
+            display: inline;
         };
     }
 
-    &__avatar {
-        border-radius: 50%;
-        height: 40px;
-        @include mq(middle) {
-            height: em(30px);
-        }
+    @keyframes bellSwing {
+        33% {transform: rotate(-30deg);}
+        66% {transform: rotate(15deg);}
+    }
+    &__notification:hover {
+        animation: 1s bellSwing backwards ease-out;
+        transform-origin: top;
     }
 }
