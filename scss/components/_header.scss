@@ -9,16 +9,30 @@
         };
     }
 
-    &__notification,
+    &__notifi-icon,
     & .img--avatar { //this property the width of profile icons
         width: em(30px);
         @include mq(middle) {
             width: em(40px);
         };
     }
-    &__notification {
+    &__notifi-icon {
         display: inline-block;
         fill: $white;
+    }
+    &__notification {
+        position: relative;
+
+        &--new-message {
+            display: inline-block;
+            background-color: $de-york;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 5px;
+        }
     }
 
     &__seperator { //draw a line between bell icon and user image
