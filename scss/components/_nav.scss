@@ -4,47 +4,39 @@
 
 .nav {
     padding: 0.5em;
-    display: grid;
-    @include mq(small) {
-        grid-template-columns: repeat(4, 1fr);
-    };
+    @include flexy(row, no-wrap, space-evenly);
+
     @include mq(middle) {
-        grid-template-rows: repeat(4, 1fr);
+        flex-direction: column;
+        justify-content: flex-start;
     };
-    // set .nav__link to change border color
-    &__link {
-        border-radius: 2px;
-        border: 3px rgba($de-york, 0) solid;
+    // set .nav__button to change border color
+    &__button {
+        width: 20%;
+        border: 2px rgba($de-york, 0) solid;
+        border-radius: 8%;
         transition: border 200ms ease-out;
         @include mq(middle) {
-            padding-left: 0.5em;
-            transition: border 200ms ease-out;
+            width: 100%;
+            border-width: 5px;
+            margin-top: 1em;
+        //     transition: border 200ms ease-out;
         };
     }
 
-    &__link:hover {
-        @include mq(small) {
-            border-bottom-color: rgba($de-york, 1);
-        };
+    &__button:hover {
         @include mq(middle) {
             border-left-color: rgba($de-york, 1);
-            // border-bottom-color: 0;
         };
     }
-    // -------------------------------------------
+    // disable svg being clicked in js
     & .icon {
-        pointer-events: none;
-        // transform: scale(0.5);
-
-    // set .nav__path to change color
-        &__path {
-            fill: $color-primary;
-            transform-origin: center;
-            transition: fill 200ms ease-out;
-        }
+        // pointer-events: none;
+        fill: $color-primary;
+        transition: fill 200ms ease-out;
     }
 
-    &__link:hover .icon__path {
+    &__button:hover .icon {
         fill: $white;
     }
     // -------------------------------------------
