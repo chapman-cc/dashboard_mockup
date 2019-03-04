@@ -6,23 +6,22 @@
     background-color: $color-secondary;
     padding: 0.5em;
     @include flexy(row, no-wrap, space-evenly);
-
     @include mq(middle) {
         flex-direction: column;
         justify-content: flex-start;
     };
-    // set .nav__button to change border color
+
     &__button {
-        width: 20%;
-        border: 2px rgba($de-york, 0) solid;
-        border-radius: 8%;
-        transition: border 200ms ease-out;
+        width: 12%;
+        // -------------------------------------------
         @include mq(middle) {
             width: 100%;
-            border-width: 5px;
             margin-top: 1em;
-        //     transition: border 200ms ease-out;
-        };
+            // set .nav__button to change border color
+            border: 5px rgba($de-york, 0) solid;
+            border-radius: 8%;
+            transition: border 200ms ease-out;
+        }
     }
 
     &__button:hover {
