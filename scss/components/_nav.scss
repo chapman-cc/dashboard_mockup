@@ -36,6 +36,12 @@
         position: absolute;
         bottom: -3em;
     }
+
+    @include mq(middle) { //un-display the magnifying search icon in nav, in middle and large display
+        & div:last-of-type {
+            display: none
+        }
+    };
     // disable svg being clicked in js
     & .icon {
         // pointer-events: none;
