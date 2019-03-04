@@ -3,6 +3,7 @@
 // -------------------------------------------
 
 .nav {
+    background-color: $color-secondary;
     padding: 0.5em;
     @include flexy(row, no-wrap, space-evenly);
 

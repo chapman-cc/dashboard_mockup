@@ -14,7 +14,6 @@
 }
 
 .header {
-    background-color: $color-primary;
     width: 100%;
     padding: 0.5em;
     grid-row: 1/2;
@@ -25,7 +24,6 @@
 }
 
 .nav {
-    background-color: $color-secondary;
     grid-row: 2/3;
     @include mq(middle) {
         grid-column: 2/3;

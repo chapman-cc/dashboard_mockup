@@ -1,4 +1,5 @@
 .header {
+    background-color: $color-primary;
     @include flexy(row, nowrap, space-between);
 
     &__profile {
