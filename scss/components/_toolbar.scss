@@ -28,14 +28,26 @@
         }
     }
 
-    // SEARCHBAR -------------------------------------------
+    // set the style of the search bar, with margin-right to push to right side
     &__search {
         width: 30%;
         margin-left: auto;
         margin-right: 0.8em;
+        position: relative;
 
-        & input {
+        & input { //remove the margin set in _form.scss
             margin: 0;
         }
+    }
+
+    &__mag-glass {
+        border: none;
+        width: 1.3em;
+        background-image: url("/images/135-search.png");
+        background-repeat: no-repeat;
+
+        position: absolute;
+        right: 5px;
+        top: 8px;
     }
 }
