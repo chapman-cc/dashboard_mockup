@@ -5,29 +5,31 @@
 .container {
     min-width: 360px;
     display: grid;
-    grid-template-rows: 4em ;
+
+    grid-template-rows: 3em 5em auto;
     @include mq(middle) {
-        grid-template-columns: 1fr 4% minmax(auto, 1000px) 1fr;
-        grid-auto-rows: auto;
+        grid-template-columns: 1fr 75px minmax(auto, 1000px) 1fr;
+        grid-template-rows: repeat(2, auto);
     };
 }
 
 .header {
     background-color: $color-primary;
     width: 100%;
-    padding: 1em;
+    padding: 0.5em;
     grid-row: 1/2;
     @include mq(middle) {
+        padding: 1em;
         grid-column: 2/4;
     };
 }
 
 .nav {
-    grid-row: 2/3;
     background-color: $color-secondary;
+    grid-row: 2/3;
     @include mq(middle) {
         grid-column: 2/3;
-        grid-row: 2/3;
+        // grid-row: 2/3;
     };
 }
 
