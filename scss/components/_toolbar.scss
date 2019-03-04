@@ -1,23 +1,19 @@
 // ========================================
 // TOOLBAR
 // ========================================
-
 .toolbar {
     background-color: lighten($silver, 20%); // TODO: make better color;
     display: flex;
     align-items: baseline;
 
-    &__tabbar {
-        @include flexy(row, nowrap, flex-start);
-    }
 
     &__tab {
+        display: inline-block;
         padding: 0.8em 1em ;
         border-right: 0.5px solid $white;
         cursor: pointer;
 
         &--selected {
-            @extend .toolbar__tab;
             background-color: $white;
             border: 2px solid $silver;
             border-bottom: none;
