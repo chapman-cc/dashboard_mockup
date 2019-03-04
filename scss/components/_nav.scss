@@ -5,6 +5,7 @@
 .nav {
     background-color: $color-secondary;
     padding: 0.5em;
+    position: relative;
     @include flexy(row, no-wrap, space-evenly);
     @include mq(middle) {
         flex-direction: column;
@@ -28,6 +29,12 @@
         @include mq(middle) {
             border-left-color: rgba($de-york, 1);
         };
+    }
+
+    &__mobile-search {
+        display: none;
+        position: absolute;
+        bottom: -3em;
     }
     // disable svg being clicked in js
     & .icon {
