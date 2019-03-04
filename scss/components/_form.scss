@@ -17,6 +17,7 @@
         width: 100%;
 
         &::placeholder {
+            color: $silver;
             text-transform: capitalize;
             font-family: $font-stack-sansserif;
         }
