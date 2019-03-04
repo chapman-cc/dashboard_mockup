@@ -24,14 +24,14 @@
 .container {
     min-width: 360px;
     display: grid;
-    grid-template-rows: 3em 5em 2em auto;
+    grid-template-rows: 3em 4em repeat(2, auto);
     grid-template-areas:
         "header"
         "nav"
         "toolbar"
         "dashboard";
     @include mq(middle) {
-        grid-template-columns: 1fr 75px minmax(auto, 1000px) 1fr;
+        grid-template-columns: 1fr 80px minmax(auto, 1200px) 1fr;
         grid-template-rows: repeat(3, auto); // TODO: check autofit for grid
         grid-template-areas:
             ". header header ."
