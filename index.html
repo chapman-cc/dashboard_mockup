@@ -92,6 +92,168 @@
         </div>
     </nav>
     <main class="dashboard">
+        <section class="dashboard__toolbar">
+            <div class="dashboard__tab">
+
+            </div>
+            <div class="dashboard__search">
+                <label for="searchBox" class="form__label--hidden">search</label>
+                <input class="form__input" type="text" name="search" id="searchBox" placeholder="search">
+            </div>
+        </section>
+        <section class="alert">
+            <p class="alert__text">This is a alert box Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, laborum.</p>
+            <p class="alert__toggle">X</p>
+        </section>
+        <section class="dashboard__widget traffic">
+            <h3 class="title--card">traffic</h3>
+        </section>
+        <section class="dashboard__widget daily-traffic">
+            <h3 class="title--card">daily traffic</h3>
+        </section>
+        <section class="dashboard__widget mobile-user">
+            <h3 class="title--card">mobile users</h3>
+        </section>
+        <section class="dashboard__widget social">
+            <h3 class="title--card">social stats</h3>
+            <div class="dashboard__widget dashboard__widget--social">
+                <div class="card">
+                    <div class="card__graphic">
+                        <svg class="icon" viewBox="0 -3 31 31">
+                            <use xlink:href="#twitterSvg"/>
+                        </svg>
+                    </div>
+                    <div class="card__container">
+                        <h4 class="card__title">twitter</h4>
+                        <p class="card__info">10,345</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__graphic">
+                        <svg class="icon" viewBox="0 0 55 55">
+                            <use xlink:href="#facebookSvg"/>
+                        </svg>
+                    </div>
+                    <div class="card__container">
+                        <h4 class="card__title">Facebook</h4>
+                        <p class="card__info">8,739</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__graphic">
+                        <svg class="icon" viewBox="0 -1 33 33">
+                            <use xlink:href="#googlePlusSvg"/>
+                        </svg>
+                    </div>
+                    <div class="card__container">
+                        <h4 class="card__title">Google+</h4>
+                        <p class="card__info">2,530</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="dashboard__widget new-members">
+            <h3 class="title--card">new members</h3>
+            <div class="log">
+                <div class="log__item">
+                    <img class="img--avatar" src="images\member-1.jpg" alt="member-1">
+                    <div class="log__displayinfo">
+                        <h4 class="log__message">Victoria Chambers</h4>
+                        <a href="#" class="log__link">victoria.chambers80@example.com</a>
+                    </div>
+                    <p class="log__date">10/15/15</p>
+                </div>
+                <div class="log__item">
+                    <img class="img--avatar" src="images\member-2.jpg" alt="member-2">
+                    <div class="log__displayinfo">
+                        <h4 class="log__message">Dale Byrd</h4>
+                        <a href="#" class="log__link">dale.byrd52@example.com</a>
+                    </div>
+                    <p class="log__date">10/15/15</p>
+                </div>
+                <div class="log__item">
+                    <img class="img--avatar" src="images\member-3.jpg" alt="member-2">
+                    <div class="log__displayinfo">
+                        <h4 class="log__message">Dale Byrd</h4>
+                        <a href="#" class="log__link">dale.byrd52@example.com</a>
+                    </div>
+                    <p class="log__date">10/15/15</p>
+                </div>
+                <div class="log__item">
+                    <img class="img--avatar" src="images\member-4.jpg" alt="member-2">
+                    <div class="log__displayinfo">
+                        <h4 class="log__message">Dan Oliver</h4>
+                        <a href="#" class="log__link">dan.oliver82@example.com</a>
+                    </div>
+                    <p class="log__date">10/15/15</p>
+                </div>
+            </div>
+        </section>
+        <section class="dashboard__widget recent-activity">
+            <h3 class="title--card">recent activity</h3>
+            <div class="log">
+                <div class="log__item">
+                    <img class="img--avatar" src="images\member-1.jpg" alt="member-1">
+                    <div class="log__displayinfo">
+                        <p class="log__message">Victoria Chambers commented on YourApp's SEO Tips</p>
+                        <p class="log__message">4 hours ago</p>
+                    </div>
+                    <p class="log__arrow">></p> <!-- TODO: need to redo the arrow, best use svg -->
+                </div>
+                <div class="log__item">
+                    <img class="img--avatar" src="images\member-2.jpg" alt="member-2">
+                    <div class="log__displayinfo">
+                        <p class="log__message">Dale Byrd like the post Facebook's Changes for 2016</p>
+                        <p class="log__message">5 hours ago</p>
+                    </div>
+                    <p class="log__arrow">></p> <!-- TODO: need to redo the arrow, best use svg -->
+                </div>
+                <div class="log__item">
+                    <img class="img--avatar" src="images\member-3.jpg" alt="member-2">
+                    <div class="log__displayinfo">
+                        <p class="log__message">Dawn Wood commented on Facebook's Changes for 2016</p>
+                        <p class="log__message">5 hours ago</p>
+                    </div>
+                    <p class="log__arrow">></p> <!-- TODO: need to redo the arrow, best use svg -->
+                </div>
+                <div class="log__item">
+                    <img class="img--avatar" src="images\member-4.jpg" alt="member-2">
+                    <div class="log__displayinfo">
+                        <p class="log__message">Dan Oliver posted YourApp's SEO tip</p>
+                        <p class="log__message">1 day ago</p>
+                    </div>
+                    <p class="log__arrow">></p> <!-- TODO: need to redo the arrow, best use svg -->
+                </div>
+            </div>
+        </section>
+        <section class="dashboard__widget message-user">
+            <h3 class="title--card">message user</h3>
+            <form class="form" action="index.html" method="post">
+                <label for="searchUser" class="form__label--hidden">search for user</label>
+                <input class="form__input" type="text" name="search-user" id="searchUser" placeholder="search for user"><br>
+                <label for="messageToUser" class="form__label--hidden">message for user</label>
+                <textarea class="form__input" name="message-to-user" id="messageToUser" rows="8" cols="80" placeholder="message for user"></textarea><br>
+                <button class="btn btn--affirm" type="submit" name="save">send</button>
+            </form>
+        </section>
+        <section class="dashboard__widget settings">
+            <h3 class="title--card">settings</h3>
+            <form class="" action="index.html" method="post">
+                <label class="form__label" for="emailNotification">send email notifications</label>
+                <input type="checkbox" name="" id="emailNotification"><br>
+                <label class="form__label" for="profilePublic">set profile to public</label>
+                <input type="checkbox" name="" id="profilePublic"><br>
+                <label class="form__label" for="userTimezone"></label>
+                <select class="form__input" name="user-timezone" id="userTimezone" placeholder="select timezone">
+                    <option value="">###</option>
+                </select><br>
+                <div class="form__col">
+                    <button class="btn btn--affirm" type="submit" name="save">save</button>
+                    <button class="btn btn--cancel" type="reset" name="cancel">canel</button>
+                </div>
+            </form>
+        </section>
 
     </main>
 
