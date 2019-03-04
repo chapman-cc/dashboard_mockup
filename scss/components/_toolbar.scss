@@ -3,5 +3,39 @@
 // ========================================
 
 .toolbar {
-    background-color: $white;
+    background-color: lighten($silver, 20%); // TODO: make better color;
+    display: flex;
+    align-items: baseline;
+
+    &__tabbar {
+        @include flexy(row, nowrap, flex-start);
+    }
+
+    &__tab {
+        padding: 0.8em 1em ;
+        border-right: 0.5px solid $white;
+        cursor: pointer;
+
+        &--selected {
+            @extend .toolbar__tab;
+            background-color: $white;
+            border: 2px solid $silver;
+            border-bottom: none;
+
+            &:first-child {
+                border-left: none;
+            }
+        }
+    }
+
+    // SEARCHBAR -------------------------------------------
+    &__search {
+        width: 30%;
+        margin-left: auto;
+        margin-right: 0.8em;
+
+        & input {
+            margin: 0;
+        }
+    }
 }
