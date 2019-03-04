@@ -25,7 +25,7 @@
         }
     }
 
-    &__button:hover {
+    &__button:hover { //nav button left border turn green on hovering
         @include mq(middle) {
             border-left-color: rgba($de-york, 1);
         };
