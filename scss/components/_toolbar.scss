@@ -2,6 +2,10 @@
 // TOOLBAR
 // ========================================
 .toolbar {
+    @include mq(small) { //do not display toolbar in mobile screen
+        display: none;
+    };
+
     background-color: lighten($silver, 20%); // TODO: make better color;
     display: flex;
     align-items: baseline;
