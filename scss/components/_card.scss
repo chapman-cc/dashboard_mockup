@@ -1,28 +1,23 @@
 // -------------------------------------------
 // CARDS
 // -------------------------------------------
-.dashboard__widget--social {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
-    justify-items: center;
-    align-items: stretch;
-}
 
 .card {
-
-    &__container { //the container house the cards
-        @include flexy(column, nowrap, space-evenly);
-        @include mq(middle){
-            flex-direction: row;
+    &__container {
+        //the container house the cards
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include mq(big) {
+            grid-gap: 5%;
         };
     }
-
-    @include flexy(row, nowrap);
     background-color: lighten($silver, 20%); // TODO: need better color
-    width: 20em;
     padding: 0.5em;
     margin-bottom: 0.5em;
+    @include flexy(column, nowrap, space-evenly, center);
+    @include mq(middle) {
+        flex-direction: row;
+    };
     box-shadow: -1px 0.5px 0.5px $color-primary;
 
     &__graphic {
@@ -31,20 +26,22 @@
         border-radius: 50%;
         width: 4em;
         padding: 0.8em;
-        @include mq(middle){
+        @include mq(middle) {
             width: 5em;
             padding: 1em;
         };
     }
 
-
-    .icon { // TODO: move SVG out
+    .icon {
+        // TODO: move SVG out
         fill: white;
     }
 
     &__profile {
         display: inline-block;
-        margin-left: 1em;
+        @include mq(middle) {
+            margin-left: 1em;
+        };
     }
 
     &__title {
@@ -52,15 +49,18 @@
         font-weight: bold;
         text-transform: capitalize;
         font-size: 0.8em;
-        @include mq(middle){
-            font-size: 1em;
+        font-size: 1em;
+        @include mq(middle) {
         };
     }
 
-    &__info {
+    &__stat {
         font-weight: lighter;
-        font-size: 2em;
-        @include mq(middle){
+        font-size: 1.5em;
+        @include mq(middle) {
+            font-size: 2em;
+        };
+        @include mq(big) {
             font-size: 3em;
         };
     }
