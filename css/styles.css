@@ -415,6 +415,21 @@ a {
 .dashboard__widget {
   padding: 1em;
 }
+.chart {
+  width: 90vw;
+  height: 25vh;
+}
+@media only screen and (min-width: 768px) {
+  .chart {
+    width: 86vw;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .chart {
+    width: 100%;
+  }
+}
+
 .card {
   background-color: #f3f3f3;
   padding: 0.5em;
