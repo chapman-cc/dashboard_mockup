@@ -18,7 +18,7 @@
     // justify-items: stretch;
     // align-items: stretch;
     grid-template-areas:
-        "alert"
+        // "alert"
         "traffic"
         "daily-traffic"
         "mobile-user"
@@ -30,17 +30,20 @@
     @include mq(big) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-        "alert alert"
-        "traffic traffic"
-        "daily-traffic mobile-user"
-        "social social"
-        "new-members recent-activity"
-        "message-user settings";
+            "traffic traffic"
+            "daily-traffic mobile-user"
+            "social social"
+            "new-members recent-activity"
+            "message-user settings";
     };
 
 
     &__widget {
         padding: 1em;
     }
+    .message-user,
+    .settings {
+        // @include flexy(column, nowrap, space-between, stretch);
     }
+    // ---------------------------------
 }

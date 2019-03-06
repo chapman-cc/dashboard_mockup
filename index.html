@@ -103,9 +103,6 @@
         </div>
         <input type="text" id="mobileSearch" class="nav__mobile-search form__input" placeholder="Search">
     </nav>
-    <main class="dashboard">
-        <section class="dashboard__toolbar">
-            <div class="dashboard__tab">
     <!-- end of nav -->
     <section class="toolbar">
         <div class="toolbar__tab">Dashboard</div>
@@ -270,10 +267,13 @@
         <section class="dashboard__widget settings">
             <h3 class="title--card">settings</h3>
             <form class="" action="index.html" method="post">
-                <label class="form__label" for="emailNotification">send email notifications</label>
-                <input type="checkbox" name="" id="emailNotification"><br>
-                <label class="form__label" for="profilePublic">set profile to public</label>
-                <input type="checkbox" name="" id="profilePublic"><br>
+                <!-- <fieldset>
+                    <legend>Checkbox</legend> -->
+                    <label class="form__label" for="emailNotification">send email notifications</label>
+                    <input type="checkbox" name="" id="emailNotification"><br>
+                    <label class="form__label" for="profilePublic">set profile to public</label>
+                    <input type="checkbox" name="" id="profilePublic"><br>
+                <!-- </fieldset> -->
                 <label class="form__label" for="userTimezone"></label>
                 <select class="form__input" name="user-timezone" id="userTimezone" placeholder="select timezone">
                     <option value="">###</option>
@@ -284,22 +284,8 @@
                 </div>
             </form>
         </section>
-    <!-- end of nav -->
-    <div class="toolbar">
-        <ul>
-            <li class="toolbar__tab toolbar__tab--selected">DashBoard</li>
-            <li class="toolbar__tab">Members</li>
-            <li class="toolbar__tab">Settings</li>
-        </ul>
-        <div class="toolbar__search">
-            <label for="searchBox" class="form__label--hidden">search</label>
-            <input class="form__input" type="text" name="search" id="searchBox" placeholder="search">
-            <input type="button" value="" class="toolbar__mag-glass" id="searchBtn">
-        </div>
-    </div>
-    <!-- end of toolbar -->
-
     </main>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
