@@ -12,18 +12,14 @@
 
     &__tab {
         display: inline-block;
+        background-color: $white;
         padding: 0.8em 1em ;
-        border-right: 0.5px solid $white;
+        border: 2px solid $silver;
+        border-bottom: none;
         cursor: pointer;
 
-        &--selected {
-            background-color: $white;
-            border: 2px solid $silver;
-            border-bottom: none;
-
-            &:first-child {
-                border-left: none;
-            }
+        &:first-child {
+            border-left: none;
         }
     }
 
