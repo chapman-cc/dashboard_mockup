@@ -1,8 +1,15 @@
 document.querySelector('.nav').addEventListener('click', e => {
     console.log(e.target);
 })
+
+
+
+
+
 const trafficChart = document.getElementById("trafficChart").getContext("2d");
-let mytrafficChart = new Chart(trafficChart, {
+const dailyTrafficChart = document.getElementById("dailyTrafficChart").getContext("2d");
+const mobileUserChart = document.getElementById("mobileUserChart").getContext("2d");
+
 let myTrafficChart = new Chart(trafficChart, {
     type: 'line',
     data: {
@@ -51,6 +58,7 @@ let myTrafficChart = new Chart(trafficChart, {
         }
     }
 });
+
 const myDailyTrafficChart = new Chart(dailyTrafficChart, {
     type: 'bar',
     data: {
@@ -82,5 +90,34 @@ const myDailyTrafficChart = new Chart(dailyTrafficChart, {
               }
             }]
         }
+    }
+});
+
+const myMobileChart = new Chart(mobileUserChart, {
+    type: 'doughnut',
+    data: {
+        labels: ["Phones", "Tablet", "Desktop"],
+        datasets: [{
+            label: 'Mobile Users',
+            data: [75, 12.5, 12.5],
+            backgroundColor: ['rgb(116, 119, 191)', 'rgb(129, 201, 143)', 'rgb(116, 177, 191)'],
+            borderColor: ['rgb(116, 119, 191)', 'rgb(129, 201, 143)', 'rgb(116, 177, 191)'],
+            borderWidth: 2,
+          hoverBackgroundColor: ['rgb(116, 119, 191, 0.7)', 'rgb(129, 201, 143, 0.7)', 'rgb(116, 177, 191, 0.7)'],
+          hoverBorderWidth: 5
+        }]
+    },
+    options: {
+        // Chart Responsiveness --------
+        responsive: true,
+        responsiveAnimationDuration: 500,
+        maintainAspectRatio: false,
+        aspectRatio: 1,
+        // -----------------------------
+        legend: {
+          display: true,
+          position: "right",
+        },
+        rotation: 2 * Math.PI
     }
 });
