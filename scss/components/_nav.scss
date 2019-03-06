@@ -13,7 +13,7 @@
     };
 
     &__button {
-        width: 12%;
+        width: 2em;
         // -------------------------------------------
         @include mq(middle) {
             width: 100%;
