@@ -37,5 +37,15 @@
             ". header header ."
             ". nav toolbar ."
             ". nav dashboard ."
+    }
+    position: relative;
+}
+//-----------------------------
+.alert { //this set alertbox position relative to .container
+    position: absolute;
+    top: 7em;
+    @include mq(middle){
+        left: 20%;
+        right: 15%;
     };
 }

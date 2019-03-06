@@ -5,7 +5,7 @@
 .alert {
     @extend %round-box;
     border-radius: 10px;
-    padding: 0.8em;
+    padding: 1.5em;
     margin: 0.5em 1em;
     background-color: $color-primary;
 
@@ -19,7 +19,7 @@
         color: $white;
         font-weight: lighter;
 
-        &::before {
+        &::before { // add "Alert" wording infront of an alert box
             content: "Alert";
             font-weight: bold;
             margin-right: 1em;
@@ -28,6 +28,7 @@
 
     &__toggle {
         color:$white;
+        margin-left: 3em;
         cursor: pointer;
 
         &:hover {
