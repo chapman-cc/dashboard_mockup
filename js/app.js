@@ -51,3 +51,36 @@ let myTrafficChart = new Chart(trafficChart, {
         }
     }
 });
+const myDailyTrafficChart = new Chart(dailyTrafficChart, {
+    type: 'bar',
+    data: {
+        labels: ["S", "M", "T", "W", "T", "F", "S"],
+        datasets: [{
+            label: 'Daily Traffic',
+            data: [75, 100, 175, 125, 225, 200, 100],
+            backgroundColor: 'rgb(116, 119, 191)',
+            borderColor: 'rgb(116, 119, 191)',
+            borderWidth: 2,
+          hoverBackgroundColor: 'rgb(116, 119, 191, 0.7)'
+
+        }]
+    },
+    options: {
+        // Chart Responsiveness --------
+        responsive: true,
+        responsiveAnimationDuration: 500,
+        maintainAspectRatio: false,
+        aspectRatio: 0,
+        // -----------------------------
+        legend: {
+          display: false
+        },
+        scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true
+              }
+            }]
+        }
+    }
+});
