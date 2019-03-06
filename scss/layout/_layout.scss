@@ -32,7 +32,7 @@
         "dashboard";
     @include mq(middle) {
         grid-template-columns: 1fr 80px minmax(auto, 1200px) 1fr;
-        grid-template-rows: repeat(3, auto); // TODO: check autofit for grid
+        grid-template-rows: 3em 3.2em auto; // TODO: check autofit for grid
         grid-template-areas:
             ". header header ."
             ". nav toolbar ."
