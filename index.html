@@ -267,22 +267,38 @@
         </section>
         <section class="dashboard__widget settings">
             <h3 class="title--card">settings</h3>
-            <form class="" action="index.html" method="post">
+            <form action="index.html" method="post">
                 <!-- <fieldset>
                     <legend>Checkbox</legend> -->
-                    <label class="form__label" for="emailNotification">send email notifications</label>
-                    <input type="checkbox" name="" id="emailNotification"><br>
-                    <label class="form__label" for="profilePublic">set profile to public</label>
-                    <input type="checkbox" name="" id="profilePublic"><br>
+                <label class="form__label" for="emailNotification">send email notifications</label>
+                <label class="switch-light switch-ios" onclick="">
+                    <input type="checkbox" id="emailNotification">
+                    <span>
+                        <span>Off</span>
+                        <span>On</span>
+                        <a></a>
+                    </span>
+                </label>
+                <label class="form__label" for="profilePublic">set profile to public</label>
+                <label class="switch-light switch-ios" onclick="">
+                    <input type="checkbox" id="profilePublic">
+                    <span>
+                        <span>Off</span>
+                        <span>On</span>
+                        <a></a>
+                    </span>
+                </label>
+                <!-- <input type="checkbox" name="" id="emailNotification"><br> -->
+                <!-- <input type="checkbox" name="" id="profilePublic"><br> -->
                 <!-- </fieldset> -->
-                <label class="form__label" for="userTimezone"></label>
+                <label class="form__label--hidden" for="userTimezone"></label>
                 <select class="form__input" name="user-timezone" id="userTimezone" placeholder="select timezone">
                     <option value="">###</option>
-                </select><br>
-                <div class="form__col">
-                    <button class="btn btn--affirm" type="submit" name="save">save</button>
-                    <button class="btn btn--cancel" type="reset" name="cancel">canel</button>
-                </div>
+                </select>
+                <!-- <div class="form__col"> -->
+                <button class="btn btn--affirm" type="submit" name="save">save</button>
+                <button class="btn btn--cancel" type="reset" name="cancel">canel</button>
+                <!-- </div> -->
             </form>
         </section>
     </main>

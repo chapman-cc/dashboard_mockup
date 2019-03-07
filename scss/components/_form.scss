@@ -5,7 +5,7 @@
     position: relative;
     &__label {
         display: inline-block;
-        width: 40%;
+        // width: 40%;
         margin-bottom: 1em;
 
         &--hidden {
@@ -35,9 +35,9 @@
         transform: scale(2);
         transform-origin: top right;
     }
-    &__col {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1em;
-    }
+    // &__col {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, 1fr);
+    //     grid-gap: 1em;
+    // }
 }

@@ -15,10 +15,7 @@
 
     display: grid;
     grid-auto-rows: auto;
-    // justify-items: stretch;
-    // align-items: stretch;
     grid-template-areas:
-        // "alert"
         "traffic"
         "daily-traffic"
         "mobile-user"
@@ -41,9 +38,19 @@
     &__widget {
         padding: 1em;
     }
-    .message-user,
-    .settings {
-        // @include flexy(column, nowrap, space-between, stretch);
+    .settings form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 2em);
+        grid-gap: 2em;
+
+        & .switch-light.switch-ios {
+            width: 50%;
+        }
+        & select {
+            grid-column: 1/span 2;
+        }
+
     }
     // ---------------------------------
 }
