@@ -152,9 +152,11 @@ a {
   border-radius: 50%;
 }
 
+.form {
+  position: relative;
+}
 .form__label {
   display: inline-block;
-  width: 40%;
   margin-bottom: 1em;
 }
 .form__label--hidden {
@@ -168,10 +170,15 @@ a {
   text-transform: capitalize;
   font-family: Helvetica, Verdana, sans-serif;
 }
-.form__col {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1em;
+.form__search-button {
+  background: url("../images/135-search.png") no-repeat center;
+  background-size: contain;
+  border: 0;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  transform: scale(2);
+  transform-origin: top right;
 }
 
 .btn {
@@ -330,7 +337,7 @@ a {
   justify-content: space-between;
   align-items: baseline;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .toolbar {
     display: none;
   }
@@ -415,6 +422,45 @@ a {
 .dashboard__widget {
   padding: 1em;
 }
+.dashboard .traffic .title--card {
+  display: inline-block;
+}
+.dashboard .traffic fieldset {
+  display: inline-block;
+  width: 50%;
+  float: right;
+}
+.dashboard .traffic .switch-candy {
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+.dashboard .traffic .switch-candy label {
+  color: #000;
+  text-shadow: none;
+}
+.dashboard .traffic .switch-candy input:checked + label {
+  color: #fff;
+}
+.dashboard .traffic .switch-candy a {
+  border: none;
+  border-radius: 50px;
+  box-shadow: none;
+  background-image: none;
+}
+.dashboard .settings form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 2em);
+  grid-gap: 2em;
+}
+.dashboard .settings form .switch-light.switch-ios {
+  width: 50%;
+}
+.dashboard .settings form select {
+  grid-column: 1/span 2;
+}
+
 .chart {
   width: 90vw;
   height: 25vh;
