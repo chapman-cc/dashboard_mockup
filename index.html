@@ -307,7 +307,15 @@
                 <!-- </fieldset> -->
                 <label class="form__label--hidden" for="userTimezone"></label>
                 <select class="form__input" name="user-timezone" id="userTimezone" placeholder="select timezone">
-                    <option value="">###</option>
+                    <option disabled selected style='display:none;'>US Time zone...</option>
+                    <option value="America/Puerto_Rico">Puerto Rico (Atlantic)</option>
+                    <option value="America/New_York">New York (Eastern)</option>
+                    <option value="America/Chicago">Chicago (Central)</option>
+                    <option value="America/Denver">Denver (Mountain)</option>
+                    <option value="America/Phoenix">Phoenix (MST)</option>
+                    <option value="America/Los_Angeles">Los Angeles (Pacific)</option>
+                    <option value="America/Anchorage">Anchorage (Alaska)</option>
+                    <option value="Pacific/Honolulu">Honolulu (Hawaii)</option>
                 </select>
                 <!-- <div class="form__col"> -->
                 <button class="btn btn--affirm" type="submit" name="save">save</button>
