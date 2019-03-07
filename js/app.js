@@ -7,9 +7,26 @@ alertToggle.addEventListener("click", (e)=> {
 })
 
 
+const messageSearchUser = document.querySelector("#messageSearchUser");
+const messageText = document.querySelector("#messageText");
+const messageSubmit = document.querySelector("#messageSubmit");
+
+messageSubmit.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (messageSearchUser.value === "") {
+        alertText.textContent = "You forgot to add a user name";
+    } else if (messageText.value === "") {
+        alertText.textContent = "You forgot to add message";
+    } else {
+        alertText.textContent = `You sent a message to ${messageSearchUser.value}`
+    };
+    alertBox.className = "alert"
+})
 
 
 
+
+// This section implement chartjs via <canvas>
 const trafficChart = document.getElementById("trafficChart").getContext("2d");
 const dailyTrafficChart = document.getElementById("dailyTrafficChart").getContext("2d");
 const mobileUserChart = document.getElementById("mobileUserChart").getContext("2d");
