@@ -123,6 +123,20 @@
     <main class="dashboard">
         <section class="dashboard__widget traffic">
             <h3 class="title--card">traffic</h3>
+            <fieldset>
+                <div class="switch-toggle switch-candy">
+                    <input id="week" name="view" type="radio" checked>
+                    <label for="week" onclick="">Week</label>
+
+                    <input id="month" name="view" type="radio">
+                    <label for="month" onclick="">Month</label>
+
+                    <input id="day" name="view" type="radio">
+                    <label for="day" onclick="">Day</label>
+
+                    <a></a>
+                </div>
+            </fieldset>
             <div class="chart">
                 <canvas id="trafficChart"></canvas>
             </div>

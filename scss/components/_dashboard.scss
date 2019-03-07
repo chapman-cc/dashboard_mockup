@@ -1,43 +1,90 @@
 // -------------------------------------------
 // DASHBOARD
 // -------------------------------------------
-.alert {grid-area: alert;}
-.traffic {grid-area: traffic;}
-.daily-traffic {grid-area: daily-traffic;}
-.social {grid-area: social;}
-.new-members {grid-area: new-members;}
-.message-user {grid-area: message-user;}
-.mobile-user {grid-area: mobile-user;}
-.recent-activity {grid-area: recent-activity;}
-.settings {grid-area: settings;}
+
+.alert {
+    grid-area: alert;
+}
+
+.traffic {
+    grid-area: traffic;
+}
+
+.daily-traffic {
+    grid-area: daily-traffic;
+}
+
+.social {
+    grid-area: social;
+}
+
+.new-members {
+    grid-area: new-members;
+}
+
+.message-user {
+    grid-area: message-user;
+}
+
+.mobile-user {
+    grid-area: mobile-user;
+}
+
+.recent-activity {
+    grid-area: recent-activity;
+}
+
+.settings {
+    grid-area: settings;
+}
 
 .dashboard {
-
     display: grid;
     grid-auto-rows: auto;
-    grid-template-areas:
-        "traffic"
-        "daily-traffic"
-        "mobile-user"
-        "social"
-        "new-members"
-        "recent-activity"
-        "message-user"
-        "settings";
+    grid-template-areas: "traffic" "daily-traffic" "mobile-user" "social" "new-members" "recent-activity" "message-user" "settings";
     @include mq(big) {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "traffic traffic"
-            "daily-traffic mobile-user"
-            "social social"
-            "new-members recent-activity"
-            "message-user settings";
+        grid-template-areas: "traffic traffic" "daily-traffic mobile-user" "social social" "new-members recent-activity" "message-user settings";
     };
-
 
     &__widget {
         padding: 1em;
     }
+    // this section is specifically redo the style for traffic chart switch handler
+    & .traffic {
+        & .title--card {
+            display: inline-block;
+        }
+
+        & fieldset {
+            display: inline-block;
+            width: 50%;
+            float: right;
+        }
+
+        & .switch-candy {
+            background-color: transparent;
+            border-radius: 0;
+            box-shadow: none;
+
+            & label {
+                color: $black;
+                text-shadow: none;
+            }
+
+            & input:checked + label {
+                color: $white;
+            }
+
+            & a {
+                border: none;
+                border-radius: 50px;
+                box-shadow: none;
+                background-image: none;
+            }
+        }
+    }
+    // this section set the setting form into grid
     .settings form {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -47,10 +94,10 @@
         & .switch-light.switch-ios {
             width: 50%;
         }
+
         & select {
             grid-column: 1/span 2;
         }
-
     }
     // ---------------------------------
 }
