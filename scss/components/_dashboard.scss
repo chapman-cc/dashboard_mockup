@@ -2,7 +2,7 @@
 // DASHBOARD
 // -------------------------------------------
 
-.alert {grid-area: alert;}
+// .alert {grid-area: alert;}
 .traffic {grid-area: traffic;}
 .daily-traffic {grid-area: daily-traffic;}
 .social {grid-area: social;}
@@ -16,7 +16,7 @@
     display: grid;
     grid-auto-rows: auto;
     grid-template-areas:
-        "alert"
+        // "alert"
         "traffic"
         "daily-traffic"
         "mobile-user"
@@ -28,7 +28,7 @@
     @include mq(big) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-            "alert alert"
+            // "alert alert"
             "traffic traffic"
             "daily-traffic mobile-user"
             "social social"

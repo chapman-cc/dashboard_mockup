@@ -6,8 +6,13 @@
     @extend %round-box;
     border-radius: 10px;
     padding: 1.5em;
-    margin: 0.5em 1em;
     background-color: $color-primary;
+
+    position: fixed;
+    z-index: 9;
+    top: 4em;
+    left: 25%;
+    right: 20%;
 
     &--hidden {
         display: none;
