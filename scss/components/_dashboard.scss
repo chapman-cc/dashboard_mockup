@@ -2,49 +2,38 @@
 // DASHBOARD
 // -------------------------------------------
 
-.alert {
-    grid-area: alert;
-}
-
-.traffic {
-    grid-area: traffic;
-}
-
-.daily-traffic {
-    grid-area: daily-traffic;
-}
-
-.social {
-    grid-area: social;
-}
-
-.new-members {
-    grid-area: new-members;
-}
-
-.message-user {
-    grid-area: message-user;
-}
-
-.mobile-user {
-    grid-area: mobile-user;
-}
-
-.recent-activity {
-    grid-area: recent-activity;
-}
-
-.settings {
-    grid-area: settings;
-}
+.alert {grid-area: alert;}
+.traffic {grid-area: traffic;}
+.daily-traffic {grid-area: daily-traffic;}
+.social {grid-area: social;}
+.new-members {grid-area: new-members;}
+.message-user {grid-area: message-user;}
+.mobile-user {grid-area: mobile-user;}
+.recent-activity {grid-area: recent-activity;}
+.settings {grid-area: settings;}
 
 .dashboard {
     display: grid;
     grid-auto-rows: auto;
-    grid-template-areas: "traffic" "daily-traffic" "mobile-user" "social" "new-members" "recent-activity" "message-user" "settings";
+    grid-template-areas:
+        "alert"
+        "traffic"
+        "daily-traffic"
+        "mobile-user"
+        "social"
+        "new-members"
+        "recent-activity"
+        "message-user"
+        "settings";
     @include mq(big) {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "traffic traffic" "daily-traffic mobile-user" "social social" "new-members recent-activity" "message-user settings";
+        grid-template-areas:
+            "alert alert"
+            "traffic traffic"
+            "daily-traffic mobile-user"
+            "social social"
+            "new-members recent-activity"
+            "message-user settings";
     };
 
     &__widget {
