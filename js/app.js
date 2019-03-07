@@ -1,5 +1,9 @@
-document.querySelector('.nav').addEventListener('click', e => {
-    console.log(e.target);
+const alertBox = document.querySelector("#alert");
+const alertText = alertBox.querySelector("#alertText");
+const alertToggle = alertBox.querySelector("#alertToggle");
+
+alertToggle.addEventListener("click", (e)=> {
+    alertBox.className = "alert--hidden"
 })
 
 
