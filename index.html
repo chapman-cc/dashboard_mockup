@@ -272,18 +272,16 @@
         <section class="dashboard__widget message-user">
             <h3 class="title--card">message user</h3>
             <form class="form" action="index.html" method="post">
-                <label for="searchUser" class="form__label--hidden">search for user</label>
-                <input class="form__input" type="text" name="search-user" id="searchUser" placeholder="search for user"><br>
-                <label for="messageToUser" class="form__label--hidden">message for user</label>
-                <textarea class="form__input" name="message-to-user" id="messageToUser" rows="8" cols="80" placeholder="message for user"></textarea><br>
-                <button class="btn btn--affirm" type="submit" name="save">send</button>
+                <label for="messageSearchUser" class="form__label--hidden">search for user</label>
+                <input class="form__input" type="text" name="search-user" id="messageSearchUser" placeholder="search for user"><br>
+                <label for="messageText" class="form__label--hidden">message for user</label>
+                <textarea class="form__input" name="message-to-user" id="messageText" rows="8" cols="80" placeholder="message for user"></textarea><br>
+                <button class="btn btn--affirm" id="messageSubmit" type="submit" name="save">send</button>
             </form>
         </section>
         <section class="dashboard__widget settings">
             <h3 class="title--card">settings</h3>
             <form action="index.html" method="post">
-                <!-- <fieldset>
-                    <legend>Checkbox</legend> -->
                 <label class="form__label" for="emailNotification">send email notifications</label>
                 <label class="switch-light switch-ios" onclick="">
                     <input type="checkbox" id="emailNotification">
@@ -302,9 +300,6 @@
                         <a></a>
                     </span>
                 </label>
-                <!-- <input type="checkbox" name="" id="emailNotification"><br> -->
-                <!-- <input type="checkbox" name="" id="profilePublic"><br> -->
-                <!-- </fieldset> -->
                 <label class="form__label--hidden" for="userTimezone"></label>
                 <select class="form__input" name="user-timezone" id="userTimezone" placeholder="select timezone">
                     <option disabled selected style='display:none;'>US Time zone...</option>
