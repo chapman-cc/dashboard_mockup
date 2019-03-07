@@ -2,6 +2,7 @@
 // FORMS
 // -------------------------------------------
 .form {
+    position: relative;
     &__label {
         display: inline-block;
         width: 40%;
@@ -21,6 +22,18 @@
             text-transform: capitalize;
             font-family: $font-stack-sansserif;
         }
+    }
+
+    &__search-button {
+        background:  url("../images/135-search.png") no-repeat center;
+        background-size: contain;
+
+        border: 0;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        transform: scale(2);
+        transform-origin: top right;
     }
     &__col {
         display: grid;
