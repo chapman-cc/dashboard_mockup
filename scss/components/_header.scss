@@ -4,6 +4,7 @@
 
     &__profile {
         display: inline-block;
+        position: relative;
         @include flexy(row, nowrap, space-between, center);
         @include mq(middle) {
             margin: 0 2em;
@@ -34,6 +35,30 @@
             top: 0;
             right: 2.5px;
         }
+    }
+
+    &__log {
+        position: absolute;
+        top: 110%;
+        right: 10%;
+        z-index: 9;
+        background-color: $color-primary;
+        border: 0.3em solid $white;
+        box-shadow: 2px 2px 20px;
+        width: 90vw;
+
+        @include mq(middle) {
+            right: 70%;
+            width: 500px;
+        };
+
+        & p {
+            color: $white;
+        }
+
+        // &--hidden {
+        //     display: none;
+        // }
     }
 
     &__seperator { //draw a line between bell icon and user image

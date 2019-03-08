@@ -14,6 +14,20 @@ mobileSearchButton.addEventListener("click", (e)=>{
     searchField.hidden? searchField.hidden=false:searchField.hidden=true;
 })
 
+// this section adds function to notification toggle
+const header = document.querySelector("#header");
+const notification = header.querySelector(".header__notification");
+const notifMessageDot = header.querySelector(".header__notification--new-message");
+const notifLog = header.querySelector(".header__log");
+const recentActivityLog = document.querySelector("#recentActivity .log");
+
+notification.addEventListener("click", (e)=> {
+    notifMessageDot.style.display = "none";
+    notifLog.hidden? notifLog.hidden = false: notifLog.hidden = true;
+    notifLog.innerHTML = recentActivityLog.innerHTML
+})
+
+// this section add functions to message section
 const messageSearchUser = document.querySelector("#messageSearchUser");
 const messageText = document.querySelector("#messageText");
 const messageSubmit = document.querySelector("#messageSubmit");
