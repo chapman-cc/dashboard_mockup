@@ -280,30 +280,30 @@
                 <button class="btn btn--affirm" id="messageSubmit" type="submit" name="save">send</button>
             </form>
         </section>
-        <section class="dashboard__widget settings">
+        <section class="dashboard__widget settings" id="settings">
             <h3 class="title--card">settings</h3>
             <form action="index.html" method="post">
-                <label class="form__label" for="emailNotification">send email notifications</label>
+                <label class="form__label" for="setEmailNotif">send email notifications</label>
                 <label class="switch-light switch-ios" onclick="">
-                    <input type="checkbox" id="emailNotification">
+                    <input type="checkbox" id="setEmailNotif">
                     <span>
                         <span>Off</span>
                         <span>On</span>
                         <a></a>
                     </span>
                 </label>
-                <label class="form__label" for="profilePublic">set profile to public</label>
+                <label class="form__label" for="setProfilePublic">set profile to public</label>
                 <label class="switch-light switch-ios" onclick="">
-                    <input type="checkbox" id="profilePublic">
+                    <input type="checkbox" id="setProfilePublic">
                     <span>
                         <span>Off</span>
                         <span>On</span>
                         <a></a>
                     </span>
                 </label>
-                <label class="form__label--hidden" for="userTimezone"></label>
-                <select class="form__input" name="user-timezone" id="userTimezone" placeholder="select timezone">
-                    <option disabled selected style='display:none;'>US Time zone...</option>
+                <label class="form__label--hidden" for="setUserTimezone"></label>
+                <select class="form__input" name="user-timezone" id="setUserTimezone" placeholder="select timezone">
+                    <option disabled selected >US Time zone...</option>
                     <option value="America/Puerto_Rico">Puerto Rico (Atlantic)</option>
                     <option value="America/New_York">New York (Eastern)</option>
                     <option value="America/Chicago">Chicago (Central)</option>
