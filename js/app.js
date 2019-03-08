@@ -6,6 +6,13 @@ alertToggle.addEventListener("click", (e)=> {
     alertBox.className = "alert--hidden"
 })
 
+// this section toggles mobile search field
+const mobileSearchButton = document.querySelector("#mobileSearchButton");
+
+mobileSearchButton.addEventListener("click", (e)=>{
+    const searchField = mobileSearchButton.nextElementSibling;
+    searchField.hidden? searchField.hidden=false:searchField.hidden=true;
+})
 
 const messageSearchUser = document.querySelector("#messageSearchUser");
 const messageText = document.querySelector("#messageText");
