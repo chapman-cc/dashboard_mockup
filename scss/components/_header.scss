@@ -88,7 +88,7 @@
         66% {transform: rotate(15deg);}
     }
     &__notification:hover {
-        animation: 1s bellSwing backwards ease-out;
+        animation: 500ms bellSwing backwards ease-out;
         transform-origin: top;
     }
 }
