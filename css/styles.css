@@ -118,17 +118,6 @@ a {
   }
 }
 
-.alert {
-  position: absolute;
-  top: 7em;
-}
-@media only screen and (min-width: 768px) {
-  .alert {
-    left: 20%;
-    right: 15%;
-  }
-}
-
 /* -------------------------------------------
 // COMPONENTS IMPORTS
 ------------------------------------------- */
@@ -157,6 +146,7 @@ a {
 }
 .form__label {
   display: inline-block;
+  font-size: 1.2em;
   margin-bottom: 1em;
 }
 .form__label--hidden {
@@ -205,6 +195,7 @@ a {
 }
 .header__profile {
   display: inline-block;
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -240,6 +231,25 @@ a {
   position: absolute;
   top: 0;
   right: 2.5px;
+}
+.header__log {
+  position: absolute;
+  top: 110%;
+  right: 10%;
+  z-index: 9;
+  background-color: #7477BF;
+  border: 0.3em solid #fff;
+  box-shadow: 2px 2px 20px;
+  width: 90vw;
+}
+@media only screen and (min-width: 768px) {
+  .header__log {
+    right: 70%;
+    width: 500px;
+  }
+}
+.header__log p {
+  color: #fff;
 }
 .header__seperator {
   display: inline-block;
@@ -312,9 +322,9 @@ a {
   }
 }
 .nav__mobile-search {
-  display: none;
   position: absolute;
   bottom: -3em;
+  z-index: 8;
 }
 @media only screen and (min-width: 768px) {
   .nav div:last-of-type {
@@ -370,10 +380,6 @@ a {
   position: absolute;
   right: 5px;
   top: 8px;
-}
-
-.alert {
-  grid-area: alert;
 }
 
 .traffic {
@@ -600,8 +606,12 @@ a {
 .alert {
   border-radius: 10px;
   padding: 1.5em;
-  margin: 0.5em 1em;
   background-color: #7477BF;
+  position: fixed;
+  z-index: 9;
+  top: 4em;
+  left: 25%;
+  right: 20%;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
